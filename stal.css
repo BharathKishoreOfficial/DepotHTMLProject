@@ -240,6 +240,48 @@ body{
   cursor: pointer;
   padding: 10px;  /* clickable area */
 }
+.footer {
+  background: #000;
+  color: #fff;
+  padding: 60px 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* FLEX LAYOUT */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+  flex-wrap: wrap; /* important */
+}
+
+.footer-box {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-box h3 {
+  font-size: 16px;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.footer-box ul {
+  list-style: none;
+}
+
+.footer-box ul li {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #ccc;
+  cursor: pointer;
+}
+
+.footer-box ul li:hover {
+  color: #fff;
+}
 
 
 
@@ -257,7 +299,9 @@ body{
 
 
 
-/* 📱 Mobile View */
+
+
+/*  Mobile View */
 @media (max-width: 768px) {
   
   body {
@@ -308,6 +352,15 @@ body{
   .arrow {
     display: none;
   }
+    .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-box {
+    width: 100%;
+    margin-bottom: 30px;
+  }
 }
 
 
@@ -325,8 +378,7 @@ body{
 
 
 
-
-/* 📲 Tablet View */
+/*  Tablet View */
 @media (min-width: 769px) and (max-width: 1024px) {
   
   .navbar {
@@ -345,5 +397,8 @@ body{
 
   .items {
     grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  }
+    .footer-container {
+    justify-content: space-between;
   }
 }
